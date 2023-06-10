@@ -1,0 +1,12 @@
+Attributes:
+
+String name;
+int Age;
+double amount;
+long accountNumber;
+
+Behaviour:
+
+withdrawMoney
+depositMoney
+checkBalance

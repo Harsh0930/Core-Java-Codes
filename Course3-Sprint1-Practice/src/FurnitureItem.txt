@@ -1,0 +1,28 @@
+public class FurnitureItem {
+
+    double priceOfChair=500.0;
+
+    double priceOfTable=600.0;
+    double priceOfStool=1000.0;
+    double priceOfCupboards=2000.0;
+
+    String furnitureType="outdoor";
+
+
+    double calcDicount(int discPerc){
+    double discountedAmount=0.0;
+    double total;
+    if (furnitureType.equalsIgnoreCase("outdoor")){
+        total=priceOfChair+priceOfTable+priceOfStool;
+        System.out.println("Total amount for Outdoor Furniture Items is: "+total);
+        discountedAmount=total-(total*discPerc/100);
+    }
+        return  discountedAmount;
+    }
+    public static void main(String[] args) {
+        FurnitureItem furniture=new FurnitureItem();
+        double total=0.0;
+        System.out.println("Discounted Amount for Outdoor Furniture Items is: "+furniture.calcDicount(5));
+    }
+
+}
